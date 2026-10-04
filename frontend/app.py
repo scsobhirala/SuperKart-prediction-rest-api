@@ -78,19 +78,3 @@ uploaded_file = st.file_uploader("Upload a CSV file for batch prediction", type=
     else:
         st.warning("Please upload a CSV file for batch prediction.")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
