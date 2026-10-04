@@ -25,7 +25,9 @@ def predict():
             data.get("Store_Size", "Medium"),
             data.get("Store_Location_City_Type", "Tier 2"),
             data.get("Store_Type", "Supermarket Type2"),
-            data.get("Product_Type", "Others")
+            data.get("Product_Type", "Others"),
+            data.get("Store_Age_Years", 0),
+            data.get("Store_Establishment_Year", 2000)
         ]
         input_df = pd.DataFrame([features], columns=[
             "Product_Weight", "Product_Sugar_Content", "Product_Allocated_Area",
