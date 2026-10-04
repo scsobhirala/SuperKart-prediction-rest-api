@@ -22,17 +22,16 @@ def predict():
             data.get("Product_Sugar_Content", "Low Sugar"),
             data.get("Product_Allocated_Area", 0.0),
             data.get("Product_MRP", 0.0),
+            data.get("Store_Establishment_Year", 2000),
             data.get("Store_Size", "Medium"),
             data.get("Store_Location_City_Type", "Tier 2"),
             data.get("Store_Type", "Supermarket Type2"),
-            data.get("Product_Type", "Others"),
-            data.get("Store_Age_Years", 0),
-            data.get("Store_Establishment_Year", 2000)
+            data.get("Product_Type", "Others")
         ]
         input_df = pd.DataFrame([features], columns=[
             "Product_Weight", "Product_Sugar_Content", "Product_Allocated_Area",
-            "Product_MRP", "Store_Size", "Store_Location_City_Type",
-            "Store_Type", "Product_Type"
+            "Product_MRP", "Store_Establishment_Year", "Store_Size",
+            "Store_Location_City_Type", "Store_Type", "Product_Type"
         ])
         predicted_value = float(model.predict(input_df)[0])
         return jsonify({"prediction": predicted_value})
